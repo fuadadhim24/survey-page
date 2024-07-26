@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Biru -->
+    <header class="header-main">
+        <div class="stopwatch">
+            <span id="time-display">00:00</span>
+        </div>
+        <div class="header-buttons">
+            <button id="end-button" class="btn btn-dark">Akhiri Sekarang</button>
+        </div>
+    </header>
+
+    <!-- Konten Utama -->
+    <div class="container mt-5">
+        <div class="header">
+            <img src="assets/img/tut_wuri.png" alt="Logo" class="logo">
+            <div class="header-text">
+                <h1>UPTD SPF SDN Nangkaan Kec. Bondowoso</h1>
+                <h3>Survey kecerdasan buatan</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 soal-container">
+                <!-- Soal Pilihan Ganda -->
+                <div class="soal" id="soal-1">
+                    <h2>1. Apakah Anda suka makanan pedas?</h2>
+                    <div class="form-check-inline mt-4">
+                        <div class="form-check-option">
+                            <input class="form-check-input" type="radio" name="soal1" value="ya" id="soal1-ya">
+                            <label class="form-check-label" for="soal1-ya">Self-awareness</label>
+                        </div>
+                        <div class="form-check-option">
+                            <input class="form-check-input" type="radio" name="soal1" value="tidak" id="soal1-tidak">
+                            <label class="form-check-label" for="soal1-tidak">Empathy to others</label>
+                        </div>
+                        <!-- Tambahkan opsi lainnya dengan cara yang sama -->
+                    </div>
+                </div>
+                
+                <!-- Soal Skala Likert -->
+                <div class="soal" id="soal-2">
+                    <h2>2. Seberapa puas Anda dengan layanan kami?</h2>
+                    <div class="form-group mt-4">
+                        <select class="form-control" name="soal2">
+                            <option value="sangat puas">Sangat Puas</option>
+                            <option value="puas">Puas</option>
+                            <option value="netral">Netral</option>
+                            <option value="kurang puas">Kurang Puas</option>
+                            <option value="sangat kurang puas">Sangat Kurang Puas</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Soal Isian Singkat -->
+                <div class="soal" id="soal-3">
+                    <h2>3. Sebutkan nama makanan favorit Anda:</h2>
+                    <input type="text" class="form-control mt-4" name="soal3" placeholder="Jawaban saya ...">
+                </div>
+                
+                <!-- Soal Pilihan Gambar -->
+                <div class="soal" id="soal-4">
+                    <h2>4. Pilih gambar favorit Anda:</h2>
+                    <div class="image-options mt-4">
+                        <div class="image-option">
+                            <input type="radio" name="soal4" value="gambar1" id="soal4-gambar1" class="image-radio">
+                            <label for="soal4-gambar1" class="image-label">
+                                <img src="assets/img/gambar1.jpg" alt="Gambar 1" class="img-thumbnail">
+                            </label>
+                        </div>
+                        <div class="image-option">
+                            <input type="radio" name="soal4" value="gambar2" id="soal4-gambar2" class="image-radio">
+                            <label for="soal4-gambar2" class="image-label">
+                                <img src="assets/img/gambar2.jpg" alt="Gambar 2" class="img-thumbnail">
+                            </label>
+                        </div>
+                        <div class="image-option">
+                            <input type="radio" name="soal4" value="gambar3" id="soal4-gambar3" class="image-radio">
+                            <label for="soal4-gambar3" class="image-label">
+                                <img src="assets/img/gambar3.jpg" alt="Gambar 3" class="img-thumbnail">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Soal Checkbox -->
+                <div class="soal" id="soal-5">
+                    <h2>5. Pilih hobi yang Anda sukai:</h2>
+                    <div class="form-check-inline mt-4">
+                        <div class="form-check-option">
+                            <input class="form-check-input" type="checkbox" name="soal5" value="membaca" id="soal5-membaca">
+                            <label class="form-check-label" for="soal5-membaca">Membaca</label>
+                        </div>
+                        <div class="form-check-option">
+                            <input class="form-check-input" type="checkbox" name="soal5" value="berlari" id="soal5-berlari">
+                            <label class="form-check-label" for="soal5-berlari">Berlari</label>
+                        </div>
+                        <div class="form-check-option">
+                            <input class="form-check-input" type="checkbox" name="soal5" value="menulis" id="soal5-menulis">
+                            <label class="form-check-label" for="soal5-menulis">Menulis</label>
+                        </div>
+                        <div class="form-check-option">
+                            <input class="form-check-input" type="checkbox" name="soal5" value="berenang" id="soal5-berenang">
+                            <label class="form-check-label" for="soal5-berenang">Berenang</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Soal Dropdown -->
+                <div class="soal" id="soal-6">
+                    <h2>6. Pilih pekerjaan Anda saat ini:</h2>
+                    <select class="form-control mt-4" name="soal6">
+                        <option value="mahasiswa">Mahasiswa</option>
+                        <option value="karyawan">Karyawan</option>
+                        <option value="pengusaha">Pengusaha</option>
+                        <option value="lainnya">Lainnya</option>
+                    </select>
+                </div>
+
+                <!-- soal range -->
+                <div class="soal" id="soal-7">
+                    <p>11. Seberapa tertarik Anda dengan topik ini?</p>
+                    <div class="range-container">
+                        <input type="range" id="range-input" min="0" max="3" step="1" value="1">
+                        <div class="range-labels">
+                            <span class="range-label" data-value="0">Tidak Tertarik</span>
+                            <span class="range-label" data-value="1">Biasa Saja</span>
+                            <span class="range-label" data-value="2">Tertarik</span>
+                            <span class="range-label" data-value="3">Sangat Tertarik</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 list-soal">
+                <div class="grid-container">
+                    <div class="grid-item" data-soal="1">
+                        <div class="grid-box">1</div>
+                    </div>
+                    <div class="grid-item" data-soal="2">
+                        <div class="grid-box">2</div>
+                    </div>
+                    <div class="grid-item" data-soal="3">
+                        <div class="grid-box">3</div>
+                    </div>
+                    <div class="grid-item" data-soal="4">
+                        <div class="grid-box">4</div>
+                    </div>
+                    <div class="grid-item" data-soal="5">
+                        <div class="grid-box">5</div>
+                    </div>
+                    <div class="grid-item" data-soal="6">
+                        <div class="grid-box">6</div>
+                    </div>
+                    <div class="grid-item" data-soal="7">
+                        <div class="grid-box">7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-buttons text-center mt-4">
+            <button id="prev-button" class="btn btn-secondary btn-custom">Previous</button>
+            <button id="next-button" class="btn btn-primary btn-custom">Next</button>
+            <button id="submit-button" class="btn btn-success btn-custom" style="display: none;">Submit</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

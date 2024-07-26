@@ -1,0 +1,336 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding-top: 70px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.soal-container {
+    padding-right: 20px;
+}
+
+.soal {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.soal h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.list-soal {
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    cursor: pointer;
+}
+
+.grid-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    font-weight: bold;
+}
+
+.grid-item.selected .grid-box {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.grid-item:not(.selected) .grid-box {
+    background-color: #fff;
+    color: #007bff;
+}
+
+.grid-box:hover {
+    background-color: #e9ecef;
+}
+
+.nav-buttons {
+    margin-top: 20px;
+}
+
+.btn-custom {
+    border-radius: 22px; 
+    padding: 10px 25px;
+}
+
+.form-check-inline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+/* Gaya untuk pilihan ganda */
+.form-check-option {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+/* Efek hover */
+.form-check-option:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-check-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.form-check-option label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-check-option.selected {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.form-check-option.selected input[type="radio"] {
+    accent-color: #007bff;
+}
+
+.form-check-option:not(.selected) {
+    border-color: #ddd;
+    color: #007bff;
+}
+
+.range-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%; /* Menyesuaikan lebar slider */
+    height: 8px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+    margin: 20px 0;
+    transition: background 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.range-labels {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 40px;
+    padding: 0 10px;
+}
+
+.range-label {
+    font-size: 14px;
+    color: #007bff;
+    text-align: center;
+    position: relative;
+}
+
+.image-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.image-option {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.image-option:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-option input[type="radio"] {
+    position: absolute;
+    opacity: 0; /* Menyembunyikan input radio */
+}
+
+.image-option input[type="radio"]:checked + label {
+    border-color: #007bff;
+}
+
+.image-option input[type="radio"]:checked + label img {
+    border: 2px solid #007bff;
+}
+
+.image-option label {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    height: 100%; 
+}
+
+.image-label img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+input[type="text"].form-control {
+    border: none;
+    border-bottom: 2px solid #ddd; 
+    background-color: transparent; 
+    padding: 10px; 
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px; 
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"].form-control::placeholder {
+    color: #888;
+    font-size: 16px; 
+}
+
+input[type="text"].form-control:focus {
+    border-bottom: 2px solid #007bff; 
+    outline: none; 
+    box-shadow: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.header-text h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.header-main {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px;
+    position: fixed; /* Menjaga header tetap di atas */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Pastikan header berada di atas elemen lainnya */
+    display: flex;
+    justify-content: flex-end; /* Menyusun semua konten di sebelah kanan */
+    align-items: center; /* Menyelaraskan konten secara vertikal */
+}
+
+.header-main > * {
+    margin-left: 20px; /* Memberi jarak antar elemen */
+}
+
+.stopwatch {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#end-button {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+.header-container {
+    margin-bottom: 70px; /* Memberi jarak agar konten tidak tertutup header */
+}
+
+#submit-button {
+    display: none; /* Sembunyikan tombol submit secara default */
+}
